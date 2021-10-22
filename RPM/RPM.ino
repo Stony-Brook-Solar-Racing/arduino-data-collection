@@ -8,14 +8,14 @@ bool obstacleChange = false;
 int RPM = 0;
 
 bool reset() {
-  Serial.println(RPM * 20);
+  Serial.println(RPM);
   RPM = 0;
   return true;
 }
 
 void setup() {
   Serial.begin(9700);
-  timer.every(3000, reset);
+  timer.every(60000, reset);
 }
 
 void loop() {
